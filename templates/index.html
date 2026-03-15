@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI System For Predicting And Preventing Global Conflicts</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<h1>AI SYSTEM FOR PREDICTING AND PREVENTING GLOBAL CONFLICTS</h1>
+</header>
+
+<div id="warAlert" class="alert-banner">
+GLOBAL WAR STATUS: STABLE
+</div>
+
+<!-- FEATURE NAVIGATION -->
+<div class="feature-nav">
+
+<button id="nav1" class="active" onclick="showPage(1)">Simulation</button>
+
+<button id="nav2" onclick="showPage(2)">Risk Analyzer</button>
+
+<button id="nav3" onclick="showPage(3)">Effects</button>
+
+<button id="nav4" onclick="showPage(4)">War Impact</button>
+
+<button id="nav5" onclick="showPage(5)">AI Report</button>
+
+<button id="nav6" onclick="showPage(6)">Global Map</button>
+
+</div>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+
+<div class="card">
+
+<h3>Simulation Parameters</h3>
+
+<select id="attacker">
+<option>USA</option>
+<option>Russia</option>
+<option>China</option>
+<option>India</option>
+<option>Pakistan</option>
+<option>Iran</option>
+<option>Israel</option>
+<option>North Korea</option>
+<option>South Korea</option>
+<option>Germany</option>
+<option>France</option>
+<option>UK</option>
+<option>Japan</option>
+<option>Turkey</option>
+<option>Saudi Arabia</option>
+</select>
+
+<select id="defender">
+<option>USA</option>
+<option>Russia</option>
+<option>China</option>
+<option>India</option>
+<option>Pakistan</option>
+<option>Iran</option>
+<option>Israel</option>
+<option>North Korea</option>
+<option>South Korea</option>
+<option>Germany</option>
+<option>France</option>
+<option>UK</option>
+<option>Japan</option>
+<option>Turkey</option>
+<option>Saudi Arabia</option>
+<option>Ukraine</option>
+</select>
+
+<button onclick="simulate()">Run Simulation</button>
+
+<h2 id="prediction"></h2>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+
+<div class="card">
+<h3>Global War Risk Analyzer</h3>
+
+<div class="risk-container">
+<div class="risk-meter">
+<span id="riskValue">0%</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+<div class="card">
+
+<h3>Immediate Impact Effects</h3>
+<ul id="directEffects"></ul>
+
+<h3>Indirect Effects</h3>
+<ul id="indirectEffects"></ul>
+
+</div>
+
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+
+<div class="card">
+
+<h3>Affected Countries</h3>
+<ul id="affected"></ul>
+
+<h3>War Timeline</h3>
+<ul id="timeline"></ul>
+
+<h3>Economic Impact Forecast</h3>
+<canvas id="impactChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+
+<div class="card">
+
+<h3>AI Strategic Intelligence</h3>
+<p id="report"></p>
+
+</div>
+
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6" class="page">
+
+<div class="card">
+
+<h3>Global Risk HeatMap</h3>
+<div id="map"></div>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

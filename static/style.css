@@ -1,0 +1,150 @@
+/* BODY */
+body{
+  background:#f8fafc; /* light background */
+  color:#0f172a; /* dark text for readability */
+  font-family:Arial;
+  margin:0;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:20px;
+  border-bottom:1px solid #cbd5e1;
+}
+
+header h1{
+  color:#1e40af; /* dark blue heading */
+}
+
+/* GLOBAL ALERT */
+.alert-banner{
+  text-align:center;
+  padding:12px;
+  font-size:20px;
+  font-weight:bold;
+  background:#86efac; /* softer green */
+  color:#0f172a; /* dark text for contrast */
+  transition:all 0.5s ease;
+}
+
+.alert-critical{
+  background:#ef4444; /* red alert remains */
+  animation:blinkAlert 1s infinite;
+}
+
+.alert-warning{
+  background:#facc15; /* amber warning remains */
+  animation:blinkAlert 1.5s infinite;
+}
+@keyframes blinkAlert{
+  0%{opacity:1;}
+  50%{opacity:0.3;}
+  100%{opacity:1;}
+}
+
+/* FEATURE NAVIGATION */
+.feature-nav{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:10px;
+  border-bottom:1px solid #cbd5e1;
+  flex-wrap:wrap;
+}
+
+.feature-nav button{
+  background:#e2e8f0; /* light button background */
+  color:#0f172a; /* dark text */
+  border:none;
+  padding:10px 15px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.feature-nav button:hover{
+  background:#3b82f6; /* blue hover */
+  color:white;
+}
+
+.feature-nav button.active{
+  background:#10b981; /* green active */
+  color:white;
+}
+
+/* PAGE SYSTEM */
+.page{
+  display:none;
+  width:95%;
+  margin:auto;
+  margin-top:20px;
+}
+
+.page.active{
+  display:block;
+}
+
+/* CARD */
+.card{
+  background:#ffffff; /* white cards */
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  color:#0f172a;
+}
+
+/* SELECT */
+select{
+  padding:10px;
+  margin:5px;
+  background:#e2e8f0;
+  color:#0f172a;
+  border:none;
+  border-radius:5px;
+}
+
+/* BUTTON */
+button{
+  background:#10b981;
+  border:none;
+  padding:10px 20px;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#059669;
+}
+
+/* LIST */
+ul{
+  padding-left:20px;
+}
+
+/* MAP */
+#map{
+  height:400px;
+  width:100%;
+  border-radius:10px;
+}
+
+/* RISK METER */
+.risk-container{
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.risk-meter{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:conic-gradient(green 0deg,#e2e8f0 0deg 360deg);
+  font-size:24px;
+  font-weight:bold;
+}
